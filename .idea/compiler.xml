@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Archive_Kotlin" />
+        <module name="Student_Archive_Kotlin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Archive_Kotlin" target="11" />
+      <module name="Student_Archive_Kotlin" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -8,8 +8,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Network" />
-    <orderEntry type="module" module-name="Archive_Kotlin" />
-    <orderEntry type="module" module-name="Archive_Kotlin" />
+    <orderEntry type="module" module-name="Student_Archive_Kotlin" />
+    <orderEntry type="module" module-name="Student_Archive_Kotlin" />
     <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.6.0-M1" level="project" />
   </component>

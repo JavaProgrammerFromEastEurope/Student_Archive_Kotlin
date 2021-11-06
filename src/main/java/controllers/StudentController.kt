@@ -33,7 +33,7 @@ class StudentController : IControllerTemplate {
             GregorianCalendar(
                 Input.inputPosition("Year of birth", 2011),
                 Input.inputPosition("Month of birth", 12),
-                Input.inputPosition("Day of birth", 2011)
+                Input.inputPosition("Day of birth", 31)
             ),
             education, Input.getInteger("Number of group")
         )

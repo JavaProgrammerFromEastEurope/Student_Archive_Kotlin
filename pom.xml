@@ -35,6 +35,7 @@
             <artifactId>spring-security-config</artifactId>
             <version>${security.version}</version>
         </dependency>
+        <!--kotlin-->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
