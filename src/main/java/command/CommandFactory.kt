@@ -1,8 +1,8 @@
 package command
 
 import application.exception.NotFoundCommandException
-import command.init.SetAdminCommand
-import command.init.SetStudentsCommand
+import command.impl.SetAdminCommand
+import command.impl.SetStudentsCommand
 
 class CommandFactory private constructor() {
     private val commands = HashMap<String, Command>()

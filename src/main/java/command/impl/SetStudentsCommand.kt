@@ -1,15 +1,15 @@
-package command.init
+package command.impl
 
 import command.Command
-import controller.ValidationController
-import entity.user.User
+import controller.StudentController
+import entity.student.Student
 import network.Message
 import network.Message.Companion.makeObjectFromMessage
 import java.lang.System.out
 
-class SetAdminCommand : Command() {
+class SetStudentsCommand : Command() {
     override fun execute(message: Message?) {
         out.printf("%s - action completed successfully%n", message!!.name)
-        ValidationController.userList = makeObjectFromMessage(message) as ArrayList<User>?
+        StudentController.studentList = makeObjectFromMessage(message) as ArrayList<Student>
     }
 }

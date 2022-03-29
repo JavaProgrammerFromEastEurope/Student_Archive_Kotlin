@@ -1,19 +1,20 @@
-package command.init
+package command.impl
 
 import command.Command
+import entity.user.User
 import network.Message
 import network.Message.Companion.makeMessageWithBytes
 import network.Message.Companion.makeObjectFromMessage
 
-class RemoveStudentCommand : Command() {
+class AddAdminCommand : Command() {
     override fun execute(message: Message?): Message? {
         try {
-            val id = makeObjectFromMessage(message!!) as Long
-            serializableStudents.remove(id)
-            return makeMessageWithBytes("setStudents", serializableStudents.get())
+            val user = makeObjectFromMessage(message!!) as User?
+            serializableAuth.add(user!!)
+            return makeMessageWithBytes("addAdmin", serializableAuth.get())
         } catch (e: Exception) {
             makeMessageWithBytes(
-                "exception", String.format("Exception while removing students: %s", e.message)
+                "exception", String.format("Exception while adding users: %s", e.message)
             )
         }
         throw NullPointerException()

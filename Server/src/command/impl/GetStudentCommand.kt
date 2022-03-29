@@ -1,16 +1,16 @@
-package command.init
+package command.impl
 
 import command.Command
 import network.Message
 import network.Message.Companion.makeMessageWithBytes
 
-class GetAdminCommand : Command() {
+class GetStudentCommand : Command() {
     override fun execute(message: Message?): Message? {
         try {
-            return makeMessageWithBytes("setAdmin", serializableAuth.get())
+            return makeMessageWithBytes("setStudents", serializableStudents.get())
         } catch (e: Exception) {
             makeMessageWithBytes(
-                "exception", String.format("Exception while getting users: %s", e.message)
+                "exception", String.format("Exception while getting objects: %s", e.message)
             )
         }
         throw NullPointerException()
