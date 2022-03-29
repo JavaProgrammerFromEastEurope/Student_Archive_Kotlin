@@ -5,14 +5,14 @@ import java.net.Socket
 import java.nio.charset.StandardCharsets
 
 class CommunicationBridge(
-    private val eventListener: ITCPConnectionListener,
+    private val eventListener: TCPConnectionListener,
     private val socket: Socket
 ) {
     private lateinit var rxThread: Thread
     private var bufferedWriter: BufferedWriter
 
     constructor(
-        eventListener: ITCPConnectionListener,
+        eventListener: TCPConnectionListener,
         ipAddress: String?, port: Int
     ) : this(eventListener, Socket(ipAddress, port))
 

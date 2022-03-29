@@ -1,11 +1,11 @@
-import commands.CommandFactory
+import command.CommandFactory
 import network.CommunicationBridge
-import network.ITCPConnectionListener
+import network.TCPConnectionListener
 import network.Message
 import java.io.IOException
 import java.net.ServerSocket
 
-class Server private constructor() : ITCPConnectionListener {
+class Server private constructor() : TCPConnectionListener {
     private val connections = ArrayList<CommunicationBridge?>()
     @Synchronized
     override fun onConnectionReady(tcpConnection: CommunicationBridge?) {

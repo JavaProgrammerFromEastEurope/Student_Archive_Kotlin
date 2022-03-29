@@ -1,11 +1,11 @@
 package application
 
-import application.actions.ActionFactory
-import application.actions.IAction
-import application.actions.stages.stageAuth.GetAdminAction
-import application.exceptions.StopApplicationException
-import application.exceptions.WrongStageException
-import application.utils.Input
+import application.action.ActionFactory
+import application.action.IAction
+import application.action.stages.stageAuth.GetAdminAction
+import application.exception.StopApplicationException
+import application.exception.WrongStageException
+import application.util.Input
 
 object Application {
     private val stageFactory: ActionFactory = ActionFactory.instance

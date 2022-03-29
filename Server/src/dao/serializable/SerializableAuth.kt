@@ -1,11 +1,11 @@
 package dao.serializable
 
-import dao.IUser
+import dao.UserService
 import entity.user.User
 import java.io.*
 import java.util.*
 
-class SerializableAuth : IUser {
+class SerializableAuth : UserService {
     override fun get(): MutableList<User> {
         try {
             javaClass.getResourceAsStream(String.format("/%s", PATH)).use { stream ->

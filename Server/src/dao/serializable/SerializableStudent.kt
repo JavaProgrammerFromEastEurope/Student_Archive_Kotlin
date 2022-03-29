@@ -1,11 +1,11 @@
 package dao.serializable
 
-import dao.IStudent
+import dao.StudentService
 import entity.student.Student
 import java.io.*
 import java.util.*
 
-class SerializableStudent : IStudent {
+class SerializableStudent : StudentService {
     override fun get(): MutableList<Student> {
         try {
             javaClass.getResourceAsStream(String.format("/%s", PATH)).use { stream ->

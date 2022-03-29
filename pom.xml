@@ -13,7 +13,7 @@
         <maven.compiler.target>11</maven.compiler.target>
         <security.version>5.5.1</security.version>
         <xml.version>3.0.1</xml.version>
-        <kotlin.version>1.5.10</kotlin.version>
+        <kotlin.version>1.6.0</kotlin.version>
     </properties>
 
     <dependencies>

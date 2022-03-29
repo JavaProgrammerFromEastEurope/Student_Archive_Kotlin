@@ -1,15 +1,15 @@
 package receiver
 
-import application.exceptions.NotFoundCommandException
-import commands.CommandFactory
+import application.exception.NotFoundCommandException
+import command.CommandFactory
 import network.CommunicationBridge
-import network.ITCPConnectionListener
+import network.TCPConnectionListener
 import network.Message
 
 class Receiver(
     private val ipAddress: String?,
     private val port: Int
-) : ITCPConnectionListener {
+) : TCPConnectionListener {
     fun run(): Boolean {
         return try {
             communicationBridge = CommunicationBridge(this, ipAddress, port)
